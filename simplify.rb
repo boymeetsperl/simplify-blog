@@ -1,47 +1,52 @@
 require 'feedzirra'
-# here is the beginning of a project to create a very simple blog reader that
-# utilizes static page generation with a cool looking design by me...
 
-# grab entries from the feed
-def getEntries( url )
-  feed = Feedzirra::Feed.fetch_and_parse( url )
-  entries = feed.entries
-end
+class Simplify
 
-def startTemplate()
-  # insert beginning of html template
-  document = File.open("simplify.html", "w")
+  def initialize( feed, page )
+    @page = page
+    @feed = feed
 
-  File.open('temp1.html').each do |line|
-    document << line
+    start_template
+    add_posts
+    end_template
+    print "page generated!\n"
   end
 
-  document.close
-end
-
-def endTemplate()
-  document = File.open( "simplify.html", "w")
-
-  File.open('temp2.html').each do |line|
-    document << line
+  def start_template
+    File.open('temp1.html').each do |line|
+      @page << line
+    end
+    @page << "<h1 class='title'> #{@feed.title} </h1>"
   end
 
-  document.close
-end
-
-def genPage( entries )
-  # create a div for each entry content
-
-  startTemplate()
-
-  entries.each do |entry|
-    print entry.content
+  def end_template
+    File.open('temp2.html').each do |line|
+      @page << line
+    end
   end
 
-  #  endTemplate()
+  def add_posts
+    entries = @feed.entries
+    entries.each do |entry|
+      @page << "<div class='post'>"
+      @page << "<h2 class='post-title'> #{entry.title} </h2>"
+      @page << "#{entry.content} </div>"
+      @page << "\n"
+    end
+  end
 
 end
 
-entries = getEntries("http://thissongissick.com/blog/feed/")
-genPage( entries )
-# take entries and generate page
+print "Hi, i'll generate a page based on your feed list\n"
+
+urls = Array.new
+
+File.open('feeds.conf').each do |url|
+  urls.push( url )
+end
+
+feed = Feedzirra::Feed.fetch_and_parse( urls.first )
+simplify = File.open("simplify.html", "w")
+blog = Simplify.new( feed, simplify )
+
+simplify.close

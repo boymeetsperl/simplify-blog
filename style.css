@@ -1,4 +1,4 @@
-/*
+b/*
  * HTML5 Boilerplate
  *
  * What follows is the result of much research on cross-browser styling.
@@ -52,7 +52,6 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 
 a { color: #00e; }
 a:visited { color: #551a8b; }
-a:hover { color: #06e; }
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
@@ -219,157 +218,146 @@ td { vertical-align: top; }
    ========================================================================== */
 
 body {
-  background: #1c1c1c;
+    background: #222;
 }
 
 header {
-  width: 700px;
-  background: #1c1c1c;
-  margin: auto;
-  color: #0099B5;
+    width: 700px;
+    background: #1c1c1c;
+    margin: auto;
+    color: #0099B5;
+}
+
+a {
+    color: rgb(73, 97, 133)
+}
+h1 {
+    text-align: center;
+    font-size: 35px;
+    font-family: "Helvetica Neue"
+
 }
 
 #borderstyle{
-  width: 200px;
-  border-bottom: 0px solid #5cc00e;
-  margin: auto;
+    width: 200px;
+    border-bottom: 0px solid #5cc00e;
+    margin: auto;
 }
 
 .pagetitle {
-  text-align: center;
-  font-family: helvetica, sans-serif;
-  margin-bottom: 5px;
+    text-align: center;
+    font-family: 'Vollkorn', serif;
+    margin-bottom: 5px;
 }
 
 #colorized {
-  color: #FE57A1;
+    color: #FE57A1;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
 }
 
 .maincontainer {
-  width: 700px;
-  background: #1c1c1c;
-  margin: auto;
-  overflow: hidden;
-  color: #222;
-  margin-top: 20px;
-  position: relative;
- }
+    text-align: left ;
+    max-width: 1000px;
+    background: #222;
+    margin: auto;
+    overflow: hidden;
+    color: white;
+    margin-top: 20px;
+    position: relative;
 
-#analog, #digital {
-  color: #FFF;
-  padding-left: 10px;
-  font-family: helvetica, sans-serif;
-  font-size: 20px;
+
 }
 
-#analogdata, #digitaldata {
-  font-family: helvetica, sans-serif;
+div.post {
+    margin: auto ;
+    background: #1c1c1c;
+    max-width: 900px;
+    border: 1px solid #222;
+    border-radius: 4px;
+    box-shadow: 0 0 6px #000000;
+    font-family: 'Vollkorn', serif;
+    padding: 30px 30px 15px;
+    margin-bottom: 20px;
 }
 
-#analogdata {
-  margin-left: 10px;
-  padding-left: 10px;
-  border-left: 5px solid #0099b5;
-  color: #FFF;
+div.post pre {
+    background: #161616;
+    border-left: 2px solid #e9651b;
+    border-radius: 4px;
+    font-family: "Courier 10 Pitch", Courier, monospace
+    border: 2pt solid #222;
+    padding: 8px;
+    overflow: auto;
 }
 
-#analogdata p {
-  margin: 0;
-}
-
-#digitaldata {
-  color: #FFF;
-  margin-left: 10px;
-  padding-left: 10px;
-  border-left: 5px solid #e9651b;
-  margin-bottom: 15px;
-}
-
-#digitaldata p {
-  margin: 0;
-}
-
-.button
-{
-  display: block;
-  white-space: nowrap;
-  background-color: #e8e8e8;
-  border: 0 solid #777;
-  padding-bottom: 0 1.5em;
-  margin-bottom: 5px;
-  margin-top: 10px;
-  width: 110px;
-  font: bold 1em/2em Helvetica;
-  text-decoration: none;
-  color: #222;
-}
-
-.button:hover {
-  background: #222;
-  color: #e8e8e8;
-}
-#makeitstop {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+h2.post-title {
+    color: #FFF;
+    padding-left: 10px;
+    font-family: 'Vollkorn', serif;
+    font-size: 25px;
+    border-left: 5px solid #0099b5;
 }
 
 .subfooter {
-  background: #1c1c1c;
-  height: 100px;
-  position: relative;
-  overflow: hidden;
-  font-size: 0;
+    background: #222;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
 }
 
 .subfooter h4 {
-  padding-right: 10px;
-  z-index: 1;
-  position: absolute;
-  bottom: 15px;
-  right: 0;
-  font-size: 14px;
-  color: #a6a6a6;
+    padding-right: 10px;
+    z-index: 1;
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    font-size: 14px;
+    color: #a6a6a6;
 }
 
 .colorone, .colortwo, .colorthree, .colorfour {
-  width: 175px; height: 30px;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  position: absolute;
+    width: 225px; height: 30px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
 }
 
 .colorone {
-  background: #5cc00e;
-  bottom: 0;
-  left: 0;
+    background: #5cc00e;
+    bottom: 0;
+    left: 0;
 }
 
 .colortwo {
-  background: #FE57A1;
-  bottom: 0;
-  left: 175px;
+    background: #FE57A1;
+    bottom: 0;
+    left: 225px;
 }
 
 .colorthree {
-  background: #0099b5;
-  bottom: 0;
-  left: 350px;
+    background: #0099b5;
+    bottom: 0;
+    left: 450px;
 }
 
 .colorfour {
-  background: #e9651b;
-  bottom: 0;
-  right: 0;
+    background: #e9651b;
+    bottom: 0;
+    right: 0;
 }
 
 
 /*
-color="#7ac043"
-f660ff
-color="#e9651b"
-4b92da
+  color="#7ac043"
+  f660ff
+  color="#e9651b"
+  4b92da
 
 */
 
@@ -385,7 +373,7 @@ color="#e9651b"
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+/* Style adjustments for viewports that meet the condition */
 }
 
 
@@ -423,7 +411,7 @@ color="#e9651b"
    ========================================================================== */
 
 @media print {
-  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+    * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
   a, a:visited { text-decoration: underline; }
   a[href]:after { content: " (" attr(href) ")"; }
   abbr[title]:after { content: " (" attr(title) ")"; }
