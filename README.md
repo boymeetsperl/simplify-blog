@@ -11,8 +11,8 @@ in which the user is interested.
 * easily configurable, styles controlled with CSS3
 
 ## Usage
-`git clone https://github.com/crunkmaster/simplify-blog/`
-`gem install feedzirra`
-`ruby simplify.rb && open simplify.html`
+git clone https://github.com/crunkmaster/simplify-blog/
+gem install feedzirra
+ruby simplify.rb && open simplify.html`
 in its current state, this will generate a single static page with the feed
 inside feeds.conf
