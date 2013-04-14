@@ -1,4 +1,6 @@
+#!/usr/bin/env ruby
 require 'feedzirra'
+
 
 class Simplify
 
@@ -10,13 +12,14 @@ class Simplify
     add_posts
     end_template
     print "page generated!\n"
+    system("open simplify.html")
   end
 
   def start_template
     File.open('temp1.html').each do |line|
       @page << line
     end
-    @page << "<h1 class='title'> #{@feed.title} </h1>"
+    @page << "<h1 class='title'> <a href='#{@feed.url}'> #{@feed.title} </a> </h1>"
   end
 
   def end_template
@@ -32,12 +35,11 @@ class Simplify
       @page << "<h2 class='post-title'> #{entry.title} </h2>"
       @page << "#{entry.content} </div>"
       @page << "\n"
+
     end
   end
 
 end
-
-print "Hi, i'll generate a page based on your feed list\n"
 
 urls = Array.new
 
