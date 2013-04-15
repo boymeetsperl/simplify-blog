@@ -1,4 +1,4 @@
-# Simplify Blog
+e# Simplify Blog
 
 I don't really like traditional RSS aggregators, this project is an attempt
 at making it significantly easier to read RSS feeds by placing them in an extremely
@@ -10,6 +10,9 @@ in which the user is interested.
 * a wonderful modern design
 * easily configurable, styles controlled with CSS3
 
+## Screenshot!
+people like to see pictures, so here's one.
+[A lovely screenshot](http://i.imgur.com/zhssgVK.png)
 ## Usage
 `git clone https://github.com/crunkmaster/simplify-blog/`
 
