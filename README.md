@@ -1,4 +1,4 @@
-e# Simplify Blog
+# Simplify Blog
 
 I don't really like traditional RSS aggregators, this project is an attempt
 at making it significantly easier to read RSS feeds by placing them in an extremely
