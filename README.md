@@ -15,7 +15,7 @@ in which the user is interested.
 
 `gem install feedzirra`
 
-`ruby simplify.rb && open simplify.html`
+`ruby simplify.rb`
 
 in its current state, this will generate a single static page with the feed
-inside feeds.conf
+inside feeds.conf. right now it has only been used on OSX 10.7.2 with ruby 2.0.0.
