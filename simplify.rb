@@ -1,13 +1,11 @@
 #!/usr/bin/env ruby
 require 'feedzirra'
 
-
 class Simplify
 
   def initialize( feed, page )
     @page = page
     @feed = feed
-
     start_template
     add_posts
     end_template
